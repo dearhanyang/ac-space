@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: '天天的博客',
+  title: 'AC Space',
   tagline: '记录日常的学习、思考、分享',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20style%20boy%20with%20glasses%20wearing%20blue%20hoodie%20with%20cat%20ears%2C%20red%20bow%20tie%2C%20surprised%20expression%2C%20white%20background%2C%20cartoon%20style%2C%20high%20quality&image_size=square_hd',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -18,7 +18,7 @@ const config: Config = {
   url: 'https://dearhanyang.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/blog/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -75,17 +75,17 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: '天天的博客',
+      title: 'AC Space',
       logo: {
-        alt: '天天的博客 Logo',
-        src: 'img/logo.svg',
+        alt: 'AC Space Logo',
+        src: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20style%20boy%20with%20glasses%20wearing%20blue%20hoodie%20with%20cat%20ears%2C%20red%20bow%20tie%2C%20surprised%20expression%2C%20white%20background%2C%20cartoon%20style%2C%20high%20quality&image_size=square_hd',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'oiSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'OI',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -102,7 +102,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'OI',
               to: '/docs/intro',
             },
           ],
@@ -138,7 +138,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} 天天的博客, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AC Space, Inc. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
