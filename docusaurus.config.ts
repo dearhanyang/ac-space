@@ -80,11 +80,17 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'editorialSidebar',
-          position: 'left',
-          label: 'Editorial',
+          position: 'right',
+          label: '题解',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        { to: '/about', label: 'About Me', position: 'right' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'notesSidebar',
+          position: 'right',
+          label: '笔记',
+        },
+        { to: '/blog', label: '动态', position: 'right' },
+        { to: '/about', label: '我', position: 'right' },
         {
           href: 'https://github.com/dearhanyang/blog',
           label: 'GitHub',
@@ -99,25 +105,50 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'OI',
+              label: '题解',
               to: '/docs/editorial',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'OI链接',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'NOI报名',
+              href: 'https://cspsjtest.noi.cn/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: '四川省计算机学会',
+              href: 'https://www.spcf.cn//',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'GESP',
+              href: 'https://gesp.spcf.cn/',
+            },
+            {
+              label: 'OIerDb',
+              href: 'https://oier.baoshuo.dev/contests',
+            },
+          ],
+        },
+        {
+          title: '学习&比赛',
+          items: [
+            {
+              label: '小栈',
+              href: 'https://msoj.stackedu.com/',
+            },
+            {
+              label: '洛谷',
+              href: 'https://www.luogu.com.cn/',
+            },
+            {
+              label: 'Atcoder',
+              href: 'https://atcoder.jp/',
+            },
+            {
+              label: 'Vjudge',
+              href: 'http://vjudge.net/',
             },
           ],
         },
@@ -125,8 +156,12 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Blog',
+              label: '动态',
               to: '/blog',
+            },
+            {
+              label: '我',
+              to: '/about',
             },
             {
               label: 'GitHub',

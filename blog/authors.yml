@@ -2,7 +2,7 @@ AC:
   name: AC
   title: 信息技术爱好者
   url: https://github.com/dearhanyang
-  image_url: https://github.com/dearhanyang.png
+  image_url: img/avatar.jpg
   page: true
   socials:
     github: dearhanyang
