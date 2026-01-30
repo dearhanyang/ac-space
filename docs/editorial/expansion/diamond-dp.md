@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+title: 钻石收藏家-课题拓展
+authors: [AC]
+tags: [hello, introduction]
 ---
 
 # Create a Page
