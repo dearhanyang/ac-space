@@ -2,46 +2,31 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 学习笔记
 
-Let's discover **Docusaurus in less than 5 minutes**.
+这个栏目记录了我在学习C++和算法过程中的学习笔记和心得体会。
 
-## Getting Started
+## 关于这个栏目
 
-Get started by **creating a new site**.
+- **C++学习**：记录C++编程语言的学习笔记，包括语法、标准库、高级特性等
+- **算法学习**：整理各类算法的学习心得，包括数据结构、算法设计与分析等
+- **竞赛经验**：分享编程竞赛中的解题思路和经验总结
+- **学习资源**：推荐和整理优质的学习资源
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 学习目标
 
-### What you'll need
+通过系统性的学习和记录，我希望能够：
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+1. 扎实掌握C++编程语言的核心知识点
+2. 深入理解各类算法的原理和应用
+3. 提高编程竞赛的解题能力
+4. 为其他学习者提供有价值的参考资料
 
-## Generate a new site
+## 内容结构
 
-Generate a new Docusaurus site using the **classic template**.
+- **基础知识**：C++语法、数据结构基础
+- **算法进阶**：各种经典算法的详解
+- **竞赛题解**：编程竞赛题目的解题思路
+- **学习心得**：学习过程中的感悟和总结
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest ac-blog classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd ac-blog
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+希望这些笔记能够对正在学习C++和算法的同学有所帮助，也欢迎大家一起交流学习心得！

@@ -2,46 +2,41 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# 竞赛题解
 
-Let's discover **Docusaurus in less than 5 minutes**.
+这个栏目记录了我在各类编程竞赛中的解题思路和代码实现。
 
-## Getting Started
+## 关于这个栏目
 
-Get started by **creating a new site**.
+- **比赛题解**：提供各类编程竞赛题目的详细解析
+- **解题思路**：分享思考过程和解题方法
+- **代码实现**：提供清晰、高效的代码示例
+- **技巧总结**：总结解题过程中的关键技巧和知识点
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## 覆盖的竞赛
 
-### What you'll need
+- **CSP-J/S**：普及组和提高组的比赛题解
+- **NOIP**：全国青少年信息学奥林匹克联赛题解
+- **NOI**：全国青少年信息学奥林匹克竞赛题解
+- **IOI**：国际信息学奥林匹克竞赛题解
+- **AtCoder**：日本AtCoder平台的比赛题解
+- **平时训练**：各类模拟题和练习题的解析
 
-- [Node.js](https://nodejs.org/en/download/) version 20.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## 内容结构
 
-## Generate a new site
+- **题目描述**：简要复述题目内容
+- **解题思路**：详细分析解题方法和思路
+- **代码实现**：提供完整的代码示例
+- **复杂度分析**：分析算法的时间和空间复杂度
+- **优化思路**：探讨可能的优化方向
 
-Generate a new Docusaurus site using the **classic template**.
+## 目标
 
-The classic template will automatically be added to your project after you run the command:
+通过分享这些题解，我希望能够：
 
-```bash
-npm init docusaurus@latest ac-blog classic
-```
+1. 巩固自己对算法的理解
+2. 帮助其他选手理解解题思路
+3. 记录自己的竞赛成长历程
+4. 促进算法学习的交流和分享
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd ac-blog
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+欢迎大家交流讨论，共同进步！

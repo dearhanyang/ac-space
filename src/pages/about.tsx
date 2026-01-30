@@ -16,13 +16,12 @@ const AboutPage = () => {
             />
           </div>
           <div className={styles.profileInfo}>
-            <h2>你好！我是一个热情、开朗的大男孩</h2>
+            <h2>你好，我是 AC</h2>
             <p className={styles.tagline}>
-              爱专研技术，乐于助人，遇到喜欢的话题会滔滔不绝
+              一个相信代码与逻辑中藏有星辰大海的探索者。
             </p>
             <p>
-              我对技术充满好奇，喜欢探索各种编程语言和技术栈。在学习和工作中，我总是保持着积极向上的态度，
-              乐于帮助他人解决问题，并且善于深入研究各种技术难题。
+              在代码与公式中寻找答案，在动漫与游戏中汲取灵感。我享受独自破解难题的成就感，更期待与理解这份热爱的人，分享沿途所见的风景与星辰
             </p>
           </div>
         </div>
@@ -73,6 +72,27 @@ const AboutPage = () => {
               <h3>打羽毛球</h3>
               <p>喜欢快速反应和精准控制的运动</p>
             </div>
+            <div className={styles.hobbyItem}>
+              <div className={styles.hobbyIcon}>
+                <span className={styles.iconText}>🎮</span>
+              </div>
+              <h3>游戏</h3>
+              <p>喜欢策略类和益智类游戏，锻炼思维能力</p>
+            </div>
+            <div className={styles.hobbyItem}>
+              <div className={styles.hobbyIcon}>
+                <span className={styles.iconText}>📺</span>
+              </div>
+              <h3>动漫</h3>
+              <p>欣赏优秀的动漫作品，感受不同的故事和世界观</p>
+            </div>
+            <div className={styles.hobbyItem}>
+              <div className={styles.hobbyIcon}>
+                <span className={styles.iconText}>✈️</span>
+              </div>
+              <h3>旅游</h3>
+              <p>喜欢探索不同的地方，了解各地的文化和风景</p>
+            </div>
           </div>
         </div>
 
@@ -82,8 +102,8 @@ const AboutPage = () => {
           <div className={styles.timeline}>
             <div className={styles.timelineItem}>
               <div className={styles.timelineContent}>
-                <h3>2024年3月</h3>
-                <p>开始学习C++，踏上编程竞赛之路</p>
+                <h3>2026年</h3>
+                <p>未完待续...</p>
               </div>
             </div>
             <div className={styles.timelineItem}>
@@ -94,8 +114,8 @@ const AboutPage = () => {
             </div>
             <div className={styles.timelineItem}>
               <div className={styles.timelineContent}>
-                <h3>2026年</h3>
-                <p>未完待续...</p>
+                <h3>2024年3月</h3>
+                <p>开始学习C++，踏上编程竞赛之路</p>
               </div>
             </div>
           </div>
