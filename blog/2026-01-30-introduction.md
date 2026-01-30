@@ -1,9 +1,10 @@
 ---
-slug: Welcome
+slug: introduction
 title: 信息竞赛初中生
 authors: [AC]
 tags: [hello, introduction]
 ---
+
 # 欢迎来到 AC Space！
 
 ## 关于这个站点
