@@ -9,13 +9,7 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <main className={styles.mainContainer}>
-      <div className={styles.backgroundOverlay}>
-        <div className={styles.treeLeft}></div>
-        <div className={styles.treeRight}></div>
-        <div className={styles.mountains}></div>
-        <div className={styles.deer}></div>
-        <div className={styles.hexagons}></div>
-      </div>
+      <div className={styles.backgroundOverlay}></div>
 
       <div className={styles.contentContainer}>
         <div className={styles.avatarContainer}>

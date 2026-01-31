@@ -25,14 +25,14 @@ const config: Config = {
   organizationName: 'dearhanyang', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -102,11 +102,15 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '文档',
           items: [
             {
               label: '题解',
               to: '/docs/editorial',
+            },
+            {
+              label: '笔记',
+              to: '/docs/notes',
             },
           ],
         },
@@ -153,7 +157,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: '更多',
           items: [
             {
               label: '动态',
