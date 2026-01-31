@@ -11,19 +11,19 @@ const config: Config = {
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true, // Improve compatibility with upcoming Docusaurus v4
   },
 
   // Set the production url of your site here
   url: 'https://dearhanyang.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/blog/',
+  baseUrl: '/ac-space/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'dearhanyang', // Usually your GitHub org/user name.
-  projectName: 'blog', // Usually your repo name.
+  projectName: 'ac-space', // Usually your repo name.
 
   onBrokenLinks: 'warn',
 
@@ -90,9 +90,9 @@ const config: Config = {
           label: '笔记',
         },
         { to: '/blog', label: '动态', position: 'right' },
-        { to: '/about', label: '我', position: 'right' },
+        { to: '/me', label: '我', position: 'right' },
         {
-          href: 'https://github.com/dearhanyang/blog',
+          href: 'https://github.com/dearhanyang/ac-space',
           label: 'GitHub',
           position: 'right',
         },
@@ -165,11 +165,11 @@ const config: Config = {
             },
             {
               label: '我',
-              to: '/about',
+              to: '/me',
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/dearhanyang/blog',
+              href: 'https://github.com/dearhanyang/ac-space',
             },
           ],
         },

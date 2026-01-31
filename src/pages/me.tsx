@@ -1,16 +1,16 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './about.module.css';
+import styles from './me.module.css';
 import Layout from '@theme/Layout';
 
-const AboutPage = () => {
+const MePage = () => {
   return (
-    <Layout title="Hello" description="Hello React Page">
+    <Layout title="Hello" description="Hello Me">
       <div className={styles.container}>
         <div className={styles.profileCard}>
           <div className={styles.avatarContainer}>
             <img
-              src="/img/avatar.jpg"
+              src="img/avatar.jpg"
               alt="Avatar"
               className={styles.avatar}
             />
@@ -125,4 +125,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default MePage;
