@@ -10,7 +10,7 @@ const MePage = () => {
         <div className={styles.profileCard}>
           <div className={styles.avatarContainer}>
             <img
-              src="/img/avatar.jpg"
+              src="img/avatar.jpg"
               alt="Avatar"
               className={styles.avatar}
             />

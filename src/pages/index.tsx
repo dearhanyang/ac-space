@@ -14,7 +14,7 @@ export default function Home(): ReactNode {
       <div className={styles.contentContainer}>
         <div className={styles.avatarContainer}>
           <img
-            src="/img/avatar.jpg"
+            src="img/avatar.jpg"
             alt="AC Avatar"
             className={styles.avatar}
           />
@@ -39,7 +39,7 @@ export default function Home(): ReactNode {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/img/email.svg" alt="Email" className={styles.socialIcon} />
+            <img src="img/email.svg" alt="Email" className={styles.socialIcon} />
           </a>
 
           <a
@@ -49,7 +49,7 @@ export default function Home(): ReactNode {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/img/qq.svg" alt="QQ" className={styles.socialIcon} />
+            <img src="img/qq.svg" alt="QQ" className={styles.socialIcon} />
           </a>
         </div>
       </div>
