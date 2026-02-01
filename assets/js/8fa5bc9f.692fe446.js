@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkac_blog=globalThis.webpackChunkac_blog||[]).push([[179],{2120(a){a.exports=JSON.parse('{"metadata":{"permalink":"/ac-space/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);

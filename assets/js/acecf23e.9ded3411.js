@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkac_blog=globalThis.webpackChunkac_blog||[]).push([[903],{1912(a){a.exports=JSON.parse('{"blogBasePath":"/ac-space/blog","blogTitle":"Blog","authorsListPath":"/ac-space/blog/authors"}')}}]);

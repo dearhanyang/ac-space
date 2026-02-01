@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>双指针算法演示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .demo-container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        
+        /* 钻石可视化样式 */
+        .diamond-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            gap: 10px;
+        }
+        
+        .diamond {
+            width: 60px;
+            height: 80px;
+            background-color: #6c5ce7;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            position: relative;
+        }
+        
+        .diamond:after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: #6c5ce7;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        
+        .diamond.active {
+            background-color: #e74c3c;
+        }
+        
+        .diamond.active:after {
+            background-color: #e74c3c;
+        }
+        
+        .pointer-container {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin: 20px auto;
+        }
+        
+        .pointer {
+            font-weight: bold;
+            color: #e74c3c;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .diamond-info {
+            text-align: center;
+            margin: 20px 0;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .two-pointer-demo {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 5px solid #4caf50;
+        }
+        
+        .subsection-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #6c5ce7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #5b4dcd;
+        }
+        
+        #demo-reset-btn {
+            background-color: #7f8c8d;
+        }
+        
+        #demo-reset-btn:hover {
+            background-color: #6c7b7d;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .demo-container {
+                padding: 20px;
+            }
+            
+            .diamond {
+                width: 45px;
+                height: 65px;
+                font-size: 0.8rem;
+            }
+            
+            .pointer-container {
+                width: 250px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            button {
+                padding: 8px 16px;
+                font-size: 14px;
+                margin: 5px;
+            }
+        }
+    </style>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+</head>
+<body>
+    <div class="demo-container">
+        <div class="two-pointer-demo">
+            <h3 class="subsection-title">双指针算法演示</h3>
+            <div id="two-pointer-demo">
+                <!-- 双指针演示将由JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化双指针演示
+            initTwoPointerDemo();
+        });
+        
+        // 双指针演示脚本
+        function initTwoPointerDemo() {
+            const demoContainer = document.getElementById('two-pointer-demo');
+            const diamonds = [1, 5, 5, 9, 10, 12, 14]; // 排序后的钻石大小
+            const K = 3;
+            
+            // 清空演示区域
+            demoContainer.innerHTML = '';
+            
+            // 创建标题
+            const title = document.createElement('h4');
+            title.textContent = `双指针算法演示：钻石大小=[${diamonds.join(', ')}], K=${K}`;
+            title.style.textAlign = 'center';
+            title.style.marginBottom = '20px';
+            title.style.color = '#2c3e50';
+            demoContainer.appendChild(title);
+            
+            // 创建钻石元素
+            const diamondsContainer = document.createElement('div');
+            diamondsContainer.className = 'diamond-container';
+            
+            for (let i = 0; i < diamonds.length; i++) {
+                const diamondElement = document.createElement('div');
+                diamondElement.className = 'diamond';
+                diamondElement.innerHTML = `
+                    <div>${diamonds[i]}</div>
+                    <div style="font-size: 0.8rem; margin-top: 5px;">钻石${i+1}</div>
+                `;
+                diamondElement.id = `diamond-${i}`;
+                diamondsContainer.appendChild(diamondElement);
+            }
+            demoContainer.appendChild(diamondsContainer);
+            
+            // 创建指针指示器
+            const pointerContainer = document.createElement('div');
+            pointerContainer.className = 'pointer-container';
+            
+            const leftPointer = document.createElement('div');
+            leftPointer.className = 'pointer';
+            leftPointer.id = 'demo-left-pointer';
+            leftPointer.textContent = '左指针: 钻石1';
+            pointerContainer.appendChild(leftPointer);
+            
+            const rightPointer = document.createElement('div');
+            rightPointer.className = 'pointer';
+            rightPointer.id = 'demo-right-pointer';
+            rightPointer.textContent = '右指针: 钻石1';
+            pointerContainer.appendChild(rightPointer);
+            
+            demoContainer.appendChild(pointerContainer);
+            
+            // 创建信息显示
+            const infoContainer = document.createElement('div');
+            infoContainer.className = 'diamond-info';
+            infoContainer.id = 'demo-info';
+            infoContainer.innerHTML = `
+                <div><strong>当前窗口:</strong> 钻石1 到 钻石1</div>
+                <div><strong>当前大小差:</strong> ${diamonds[0]} - ${diamonds[0]} = 0 ≤ ${K} ✓</div>
+                <div><strong>状态:</strong> 正在扩展右边界</div>
+                <div><strong>can_take_left:</strong> [0, 0, 0, 0, 0, 0, 0]</div>
+                <div><strong>当前步骤:</strong> 0</div>
+            `;
+            demoContainer.appendChild(infoContainer);
+            
+            // 创建控制按钮
+            const controls = document.createElement('div');
+            controls.className = 'controls';
+            
+            const stepButton = document.createElement('button');
+            stepButton.textContent = '执行一步算法';
+            stepButton.id = 'demo-step-btn';
+            
+            const resetButton = document.createElement('button');
+            resetButton.textContent = '重置';
+            resetButton.id = 'demo-reset-btn';
+            
+            controls.appendChild(stepButton);
+            controls.appendChild(resetButton);
+            demoContainer.appendChild(controls);
+            
+            // 算法状态
+            let state = {
+                left: 0,
+                right: 0,
+                step: 0,
+                canTakeLeft: new Array(diamonds.length).fill(0),
+                isExpanding: true
+            };
+            
+            // 更新演示
+            function updateDemo() {
+                // 重置所有钻石状态
+                for (let i = 0; i < diamonds.length; i++) {
+                    const diamondElement = document.getElementById(`diamond-${i}`);
+                    diamondElement.classList.remove('active');
+                }
+                
+                // 标记活动窗口
+                if (state.left <= state.right) {
+                    for (let i = state.left; i <= state.right; i++) {
+                        const diamondElement = document.getElementById(`diamond-${i}`);
+                        if (diamondElement) {
+                            diamondElement.classList.add('active');
+                        }
+                    }
+                }
+                
+                // 更新指针显示
+                document.getElementById('demo-left-pointer').textContent = 
+                    `左指针: 钻石${state.left + 1}`;
+                
+                document.getElementById('demo-right-pointer').textContent = 
+                    `右指针: 钻石${state.right + 1}`;
+                
+                // 更新信息显示
+                const windowText = state.left <= state.right ? 
+                    `钻石${state.left + 1} 到 钻石${state.right + 1}` : '无';
+                
+                const diff = diamonds[state.right] - diamonds[state.left];
+                const condition = diff <= K ? `≤ ${K} ✓` : `> ${K} ✗`;
+                
+                let infoHTML = `
+                    <div><strong>当前窗口:</strong> ${windowText}</div>
+                    <div><strong>当前大小差:</strong> ${diamonds[state.right]} - ${diamonds[state.left]} = ${diff} ${condition}</div>
+                `;
+                
+                if (state.isExpanding) {
+                    infoHTML += `<div><strong>状态:</strong> 正在扩展右边界</div>`;
+                } else {
+                    infoHTML += `<div><strong>状态:</strong> 准备移动左边界</div>`;
+                }
+                
+                let canTakeLeftText = '[';
+                for (let i = 0; i < diamonds.length; i++) {
+                    if (i > 0) canTakeLeftText += ', ';
+                    canTakeLeftText += state.canTakeLeft[i] || 0;
+                }
+                canTakeLeftText += ']';
+                
+                infoHTML += `<div><strong>can_take_left:</strong> ${canTakeLeftText}</div>`;
+                infoHTML += `<div><strong>当前步骤:</strong> ${state.step}</div>`;
+                
+                document.getElementById('demo-info').innerHTML = infoHTML;
+            }
+            
+            // 执行算法步骤
+            function performStep() {
+                state.step++;
+                
+                if (state.isExpanding) {
+                    // 尝试扩展右边界
+                    if (state.right + 1 < diamonds.length && diamonds[state.right + 1] - diamonds[state.left] <= K) {
+                        state.right++;
+                    } else {
+                        // 不能再扩展，记录结果
+                        state.canTakeLeft[state.left] = state.right - state.left + 1;
+                        state.isExpanding = false;
+                    }
+                } else {
+                    // 移动左边界
+                    state.left++;
+                    if (state.right < state.left) {
+                        state.right = state.left;
+                    }
+                    state.isExpanding = true;
+                }
+                
+                // 如果左边界超出数组范围，算法结束
+                if (state.left >= diamonds.length) {
+                    stepButton.disabled = true;
+                    stepButton.textContent = '算法完成';
+                }
+                
+                updateDemo();
+            }
+            
+            // 重置算法
+            function resetAlgorithm() {
+                state = {
+                    left: 0,
+                    right: 0,
+                    step: 0,
+                    canTakeLeft: new Array(diamonds.length).fill(0),
+                    isExpanding: true
+                };
+                stepButton.disabled = false;
+                stepButton.textContent = '执行一步算法';
+                updateDemo();
+            }
+            
+            // 绑定按钮事件
+            stepButton.addEventListener('click', performStep);
+            resetButton.addEventListener('click', resetAlgorithm);
+            
+            // 初始更新
+            updateDemo();
+        }
+    </script>
+</body>
+</html>

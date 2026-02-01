@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>AC Space Blog</title>
+        <link>https://dearhanyang.github.io/ac-space/blog</link>
+        <description>AC Space Blog</description>
+        <lastBuildDate>Fri, 30 Jan 2026 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[欢迎来到 AC Space]]></title>
+            <link>https://dearhanyang.github.io/ac-space/blog/welcome</link>
+            <guid>https://dearhanyang.github.io/ac-space/blog/welcome</guid>
+            <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[站点搭建完成]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="站点搭建完成">站点搭建完成<a href="https://dearhanyang.github.io/ac-space/blog/welcome#%E7%AB%99%E7%82%B9%E6%90%AD%E5%BB%BA%E5%AE%8C%E6%88%90" class="hash-link" aria-label="站点搭建完成的直接链接" title="站点搭建完成的直接链接" translate="no">​</a></h2>
+<p>me</p>
+<p>今天，2026年1月30日，我的个人技术博客站点正式搭建完成！这是我在信息竞赛道路上的一个新起点，也是我分享学习心得的重要平台。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="关于这个站点">关于这个站点<a href="https://dearhanyang.github.io/ac-space/blog/welcome#%E5%85%B3%E4%BA%8E%E8%BF%99%E4%B8%AA%E7%AB%99%E7%82%B9" class="hash-link" aria-label="关于这个站点的直接链接" title="关于这个站点的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>算法博客</strong>：记录我学习算法的心得和笔记</li>
+<li class=""><strong>竞赛题解</strong>：分享各种编程竞赛题目的解题思路和代码</li>
+<li class=""><strong>技术分享</strong>：探讨各类技术问题和解决方案</li>
+<li class=""><strong>学习资源</strong>：整理和分享有用的学习资料</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="技术栈">技术栈<a href="https://dearhanyang.github.io/ac-space/blog/welcome#%E6%8A%80%E6%9C%AF%E6%A0%88" class="hash-link" aria-label="技术栈的直接链接" title="技术栈的直接链接" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>框架</strong>：Docusaurus 3.9.2</li>
+<li class=""><strong>语言</strong>：TypeScript、JavaScript、Markdown</li>
+<li class=""><strong>部署</strong>：GitHub Pages</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="联系方式">联系方式<a href="https://dearhanyang.github.io/ac-space/blog/welcome#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F" class="hash-link" aria-label="联系方式的直接链接" title="联系方式的直接链接" translate="no">​</a></h2>
+<p>如果你对竞赛问题有任何疑问，或者想一起讨论技术话题，欢迎通过以下方式联系我：</p>
+<ul>
+<li class=""><strong>邮箱</strong>：<a href="mailto:dearhangyang@qq.com" target="_blank" rel="noopener noreferrer" class="">dearhangyang@qq.com</a></li>
+<li class=""><strong>GitHub</strong>：<a href="https://github.com/dearhanyang" target="_blank" rel="noopener noreferrer" class="">dearhanyang</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="未来计划">未来计划<a href="https://dearhanyang.github.io/ac-space/blog/welcome#%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92" class="hash-link" aria-label="未来计划的直接链接" title="未来计划的直接链接" translate="no">​</a></h2>
+<ul>
+<li class="">定期更新竞赛题解</li>
+<li class="">分享算法学习心得</li>
+<li class="">记录备赛过程和经验</li>
+<li class="">整理学习资源和技巧</li>
+</ul>
+<p>感谢你的访问！希望这里的内容对你有所帮助。让我们一起在信息竞赛的道路上共同成长！</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
