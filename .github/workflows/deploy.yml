@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 确保获取完整的历史记录，避免构建问题
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -17,12 +20,17 @@ jobs:
           node-version: '24'
           cache: 'npm'
 
-      - name: Clean cache
+      - name: Clean cache and previous builds
         run: |
+          # 清理 npm 缓存
           npm cache clean --force
+          # 删除依赖和缓存目录
           rm -rf node_modules
           rm -rf build
           rm -rf .docusaurus
+          rm -rf ./node_modules/.cache
+          # 确保没有残留的构建文件
+          find . -name 'build' -type d -exec rm -rf {} \; 2>/dev/null || true
 
       - name: Install dependencies
         run: npm ci
@@ -30,10 +38,26 @@ jobs:
       - name: Build website
         run: npm run build
 
+      - name: Verify build output
+        run: |
+          # 检查构建是否成功
+          if [ ! -f ./build/index.html ]; then
+            echo "Build failed: index.html not found"
+            exit 1
+          fi
+          # 检查构建目录结构
+          echo "Build successful! Checking output structure:"
+          ls -la ./build
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.DEPL_TOKEN }}
           publish_dir: ./build
+          # 强制推送，确保替换所有旧文件
+          force_orphan: true
+          # 配置缓存控制
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
           # 如果使用自定义域名，取消注释下面这行
           # cname: yourdomain.com

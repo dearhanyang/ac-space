@@ -64,6 +64,12 @@ const config: Config = {
     ],
   ],
 
+  // 插件配置
+  plugins: [
+    // 缓存控制插件
+    './src/plugins/cache-control-plugin.js',
+  ],
+
   // SEO head tags
   headTags: [
     // Preconnect to important domains
@@ -97,6 +103,9 @@ const config: Config = {
       }),
     },
   ],
+
+  // 构建配置
+  trailingSlash: false, // 确保 URL 不包含尾部斜杠，有助于缓存控制
 
   themeConfig: {
     // Replace with your project's social card
